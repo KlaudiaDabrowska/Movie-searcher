@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/291e79a91f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Find your movie</title>
+</head>
+
+<body>
+    <header>
+        <h1>Find your movie</h1>
+        <div class="toolbar">
+            <div class="genres">
+                <label for="genres" class="genre">Genres</label>
+                <select id="genres">
+                    <option class="gen" value="">Select genre</option>
+                </select>
+            </div>
+            <div class="sorted">
+                <label for="sorted" class="sort1">Sort by</label>
+                <select id="sorted">
+                    <option class="sort" value="highest popularity">Popularity ▲</option>
+                    <option class="sort" value="lowest popularity">Popularity ▼</option>
+                    <option class="sort" value="earliest">Release Date ▼</option>
+                    <option class="sort" value="latest">Release Date ▲</option>
+                    <option class="sort" value="">?????</option>
+                </select>
+            </div>
+            <div class="year">
+                <label for="year" class="years">Year</label>
+                <input id="year" type="number" min="1900" max="2099" step="1" value="2021" />
+            </div>
+        </div>
+        <form>
+            <label for="search"></label>
+            <input type="text" id="search" placeholder="Search movie" class="search">
+        </form>
+    </header>
+
+
+
+    <div class="wrapper"></div>
+
+    <!-- <div class="pagination">
+        <button class="prev"><i class="fas fa-chevron-circle-left"></i></button>
+        <button class="next"><i class="fas fa-chevron-circle-right"></i></button>
+    </div> -->
+
+</body>
+
+</html>
