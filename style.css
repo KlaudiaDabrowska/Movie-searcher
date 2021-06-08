@@ -13,7 +13,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(96, 97, 110, .2);
+    background-color: rgba(96, 97, 110, 0.2);
     padding: 1.5rem;
     overflow: hidden;
     margin-bottom: 80px;
@@ -67,6 +67,8 @@ h1 {
     color: #dededd;
 }
 
+
+
 select {
     background-color: transparent;
     border: 2px solid rgba(96, 97, 110, .2);
@@ -90,4 +92,83 @@ select:hover,
 #year:hover {
     background-color: #e5e5e5;
     color: #8e8e8e;
+}
+
+.wrapper {
+    display: grid;
+    width: 70%;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.movie {
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.movie-info {
+    color: #e6e6e6;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    letter-spacing: 0.5px;
+    height: 70px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    align-self: center;
+}
+
+.movie-info h3 {
+    grid-column: 1/4;
+    font-size: 160%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-info p {
+    font-weight: 200;
+}
+
+.movie-info .y {
+    text-align: right;
+}
+
+.overview {
+    background-color: rgba(96, 97, 110, .8);
+    padding: 2rem;
+    position: absolute;
+    height: 100%;
+    border-radius: 15px;
+    overflow: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.overview .description {
+    color: #e6e6e6;
+    font-weight: bold;
+}
+
+
+
+.movie:hover .overview {
+    transform: translateY(0);
 }
